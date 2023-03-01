@@ -1,6 +1,6 @@
 # soccermatchpredictor introduction rough draft
 
-## Team members: Anna, Elshiekh, Alan, Yotam
+### Team members: Anna, Elshiekh, Alan, Yotam
 
 ## Introduction
 
