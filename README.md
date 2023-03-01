@@ -1,5 +1,7 @@
 # soccermatchpredictor introduction rough draft
 
+## Team members: Anna, Elshiekh, Alan, Yotam
+
 ## Introduction
 
 If you follow soccer or any sport for that matter, religiously, you’ll quickly realize that the outcomes are as unpredictable as guessing lottery numbers. Furthermore, accurately predicting the outcome of soccer matches is difficult. Last year, 1.5 billion people watched the world cup, making soccer the most popular sport in the world. Fans around the world try to predict the outcome of soccer matches for fun or even to make money through sports betting. As such, it is important to create a machine-learning model that can accurately predict the outcome of soccer matches. 
