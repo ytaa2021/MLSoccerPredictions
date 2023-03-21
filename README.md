@@ -22,7 +22,7 @@ A study that uses more advanced methods is “Predicting Wins, Losses and Attrib
 
  “Neural Networks Football Result Prediction” by E. Tjioe , F. Syakir , R. H. C. Shum, I. Buo, students at the University of Tartu, used their model to test betting returns. They used data from the English Premier League and the Spanish La Liga. They first created baseline models using other machine learning algorithms, like logistic regression and random forests. They then built a neural network and tuned its hyperparameters to predict the winner of each game. They showed that betting for winner, home or away, and predicted winner with threshold returned greater profit than betting with draw only factors.
  
-## Methods
+## Methods (Outline)
 
 We obtained the dataset from kaggle and need to make sure it looks clean and take care of some preprocessing logistics. Of the 25,000 data points collected from different leagues, we used matches from countries in the top 5 leagues: England, France, Germany, Italy, and Spain. 
 
