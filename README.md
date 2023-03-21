@@ -8,7 +8,7 @@ If you follow soccer or any sport for that matter, religiously, you’ll quickly
 
 You can always have a good idea of who might win based on team strength, but even that cannot be trusted at times due to the many other factors that come into play: inconsistency of players, unpredictable events during and surrounding a match, the dynamic nature of team performance and luck. Traditional statistical models lack the capability to incorporate various factors and rely heavily on past performance without considering current conditions. Furthermore, bias and limited capacity to analyze multiple factors in real-time add to the difficulty. Machine Learning has the potential to build relationships across many factors and potentially improve some of these difficulties.
 
-Using an artificial neural network, we will use various factors such as player statistics, team dynamics, and performance in previous matches for our prediction. The integration of diverse data sources and the use of advanced machine learning algorithms will help overcome the limitations of prior work. The dataset used contains information about European soccer teams from 2008 to 2016.
+Using an artificial neural network, we will use various factors such as player statistics, team dynamics, and performance in previous matches for our prediction. The integration of diverse data sources and the use of advanced machine learning algorithms will help overcome the limitations of prior work. The dataset used contains information about European soccer teams from 2008 to 2016. The Kaggle dataset contains information from 25,000+ matches and is a very population dataset for soccer. information.
 
 In our results, we expect to see significant improvement in prediction accuracy compared to traditional statistical models and human intuition. We test our results by comparing our model’s predictions against actual match outcomes and against other prediction systems. In our future work, we would like to make regular updates to our model to keep it current with new information and features as well as potential advancements in machine learning techniques. 
 
@@ -22,19 +22,7 @@ A study that uses more advanced methods is “Predicting Wins, Losses and Attrib
 
  “Neural Networks Football Result Prediction” by E. Tjioe , F. Syakir , R. H. C. Shum, I. Buo, students at the University of Tartu, used their model to test betting returns. They used data from the English Premier League and the Spanish La Liga. They first created baseline models using other machine learning algorithms, like logistic regression and random forests. They then built a neural network and tuned its hyperparameters to predict the winner of each game. They showed that betting for winner, home or away, and predicted winner with threshold returned greater profit than betting with draw only factors.
  
-## Methods (Outline)
-
-We obtained the dataset from kaggle and need to make sure it looks clean and take care of some preprocessing logistics. Of the 25,000 data points collected from different leagues, we used matches from countries in the top 5 leagues: England, France, Germany, Italy, and Spain. 
-
-We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, total goals scored, home wins and away wins percentage, and a column of 0s and 1s where 1s represent a home team win.
-
-We are using pyTorch’s Neural Network library, from which we will most likely be using the ANN architecture.
-
-For our model, we are hoping to train the neural network to accurately predict whether Team A or Team B will win, or if the result will be a tie.
-
-The end result we are hoping for is a model that when asked for the outcome of a soccer match would seem like a very well informed sports analyst.
-
-Possible pitfalls we see in our model is low or inaccurate classification.
+## Methods
 
 
 ## Works Cited
