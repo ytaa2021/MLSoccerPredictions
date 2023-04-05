@@ -27,7 +27,7 @@ We obtained the dataset from kaggle and need to make sure it looks clean and tak
 
 We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, total goals scored, home wins and away wins percentage, and a column of 0s and 1s where 1s represent a home team win.
 
-We are using pyTorch’s Neural Network library, from which we will most likely be using the ANN architecture.
+We are using pyTorch’s Neural Network library, from which we will most likely be using the feed forward architecture. We will be creating different models and comparing the accuracy of using different features.
 
 For our model, we are hoping to train the neural network to accurately predict whether Team A or Team B will win, or if the result will be a tie.
 
