@@ -49,11 +49,13 @@ We used the European Soccer Database and filtered out the teams that did not bel
 <!-- ![Figure 1. Simple Loss Graph](SimpleGraph.png) -->
 <p align="center">
   <img width="460" height="300" src="images/SimpleGraph.png">
+  <em>Figure 1. Simple Loss Graph</em>
 </p>
 one can see that validation loss is lower than training loss, which indicates that our model performs slighly better on data it has not seen before. The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
 <!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
 <p align="center">
   <img width="460" height="300" src="images/ComplexGraph.png">
+  <em>Figure 2. Complex Loss Graph</em>
 </p>
 This time, our model worked better on data it has seen before.  We are intending on using a classification model architecture and building different combinations of features for further experiments. A function was also created that takes as input the ID number for two teams, and using the complex  model, predicts the winner. However the function always predicted the same accuracy even when the teams were switched. 
 
