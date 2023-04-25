@@ -26,13 +26,26 @@ We obtained the dataset from kaggle and need to make sure it looks clean and tak
 
 We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, total goals scored, home wins and away wins percentage, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple 1 which only contains the home and away teams ID numbers, and the amount of goals scored by each team. The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw.
 
-We are using pyTorch’s Neural Network library, from which we will most likely be using the feed forward architecture. We will be creating different models and comparing the accuracy of using different features. The models we created are labeled simple and complex. The simple model is a feedforward model with 3 layers. The input layer has 2 input nodes and 16 output nodes. the hidden layer contains 16 input and 32 output nodes. The output layer contains 32 input and 1 output. The complex model is also a feedforward model with 3 layers. The layers are identical, except the input layer has 4 input nodes. 
+We are using pyTorch’s Neural Network [library](https://pytorch.org/docs/stable/nn.html), from which we will be using the feed forward architecture. We will be creating two different models and comparing the accuracy of using different features. The models we created are labeled 2-Feature and 4-Feature. The 2-Feature model is a feed forward model with 3 layers. The input layer has 2 input nodes and 16 nodes in the first hidden layer, 32 nodes in the 2nd hidden layer, and 1 output node.The 4-Feature model is also a feedvforward model with 3 layers. The layers are identical, except the input layer has 4 input nodes. 
 
-After the dataframes were completed, we normalized the data using a label encoder, and then split the data into a training and test set. For the simple model, the training set was made up of the home and away team's ID numbers, and the test set is a vector of 0s and 1s, where a 1 represents a home team win. For the complex model, the training set included the draw count and number of total matches played, in additional to both team's ID number. The test set is idential, except a 1 represents that the home team has more wins than the away team.
+After the dataframes were completed, we normalized the data using a label encoder, and then split the data into a training and test set. 
+```
+label = LabelEncoder()
+#Fit label and return encoded labels for training data
+matches["home_team_api_id"] = label.fit_transform(matches["home_team_api_id"])
+#Transform to normalize for test data
+matches["away_team_api_id"] = label.transform(matches["away_team_api_id"])
+#Training
+X = matches[["home_team_api_id", "away_team_api_id"]].values
+#Test
+y = (matches["home_team_goal"] > matches["away_team_goal"]).values
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=47)
+```
+For the 2-Feature model, the training set was made up of the home and away team's ID numbers, and the output is a vector of 0s and 1s, where a 1 represents a home team win. For the 4-Feature model, the training set included the draw count and number of total matches played, in additional to both team's ID number. The output is idential, except a 1 represents that the home team has more head-to-head wins than the away team.
 
-For our model, we are hoping to train the neural network to accurately predict whether Team A or Team B will win, or if the result will be a tie.
+For our model, we are hoping to train the neural network to accurately predict whether Team A or Team B will win, or if the result will be a tie. A tie will be declared if the model predicts the team will tie within the range 45-55%. We believe its best to add this margin because approximately 25% of soccer matches end in a draw, and the probability that the model will give a prediction of exactly 50% is rare.
 
-The end result we are hoping for is a model that when asked for the outcome of a soccer match would seem like a very well informed sports analyst.
+The end result we are hoping for is a model that when asked for the outcome of a soccer match would seem like a very well informed sports analyst, as opposed to a "dumb" model that simply picks a team at random. Such a model would most likely predict soccer matches correctly 33% of the time. 
 
 Possible pitfalls we see in our model is low or inaccurate classification.
 
