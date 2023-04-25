@@ -61,9 +61,11 @@ For the 2-Feature model, the training set was made up of the home and away team'
 
 For our model, we are hoping to train the neural network to accurately predict whether Team A or Team B will win, or if the result will be a tie. A tie will be declared if the model predicts the team will tie within the range 45-55%. We believe its best to add this margin because approximately 25% of soccer matches end in a draw, and the probability that the model will give a prediction of exactly 50% is rare.
 
+With the 2-Feature model, we will also analyze changes in the prediction accuracy by changing hyperparameters. The base model uses a binary cross entropy loss function, the Adam optimizer, and is trained with 100 epochs. We will be changing each of these parameters, as well as adding dropout layers, making the model deeper and/or wider.
+
 The end result we are hoping for is a model that when asked for the outcome of a soccer match would seem like a very well informed sports analyst, as opposed to a "dumb" model that simply picks a team at random. Such a model would most likely predict soccer matches correctly 33% of the time. 
 
-Possible pitfalls we see in our model is low or inaccurate classification.
+Possible pitfalls we see in our model is low or inaccurate classification. In our code, the home team wins if they score more points than the away team, but the model does not account for ties. At this moment, we simply treat a tie as a home team loss. However, of the 14,000+ matches in the 2-Feature dataframe, ~4000 of them end in a draw. We predict that this will lead to the model having lower accuracy than expected.
 
 
 ## Discussion
