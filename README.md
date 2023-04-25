@@ -30,7 +30,7 @@ We also removed data that was formatted in XML and the predicted odds from vario
   <img width="460" height="300" src="images/2Feature.png">
 </p>
 <p align="center">
-  <em>Figure 1. 2-Feature Table</em>
+  <em>Figure 1: 2-Feature Table</em>
 </p>
 
 The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw.
@@ -39,7 +39,7 @@ The complex dataframe also contains the ID numbers, with the addion of each team
   <img width="460" height="300" src="images/4Feature.png">
 </p>
 <p align="center">
-  <em>Figure 2. 4-Feature Table</em>
+  <em>Figure 2: 4-Feature Table</em>
 </p>
 
 We are using pyTorch’s Neural Network [library](https://pytorch.org/docs/stable/nn.html), from which we will be using the feed forward architecture. We will be creating two different models and comparing the accuracy of using different features. The models we created are labeled 2-Feature and 4-Feature. The 2-Feature model is a feed forward model with 3 layers. The input layer has 2 input nodes and 16 nodes in the first hidden layer, 32 nodes in the 2nd hidden layer, and 1 output node.The 4-Feature model is also a feedvforward model with 3 layers. The layers are identical, except the input layer has 4 input nodes. 
@@ -75,7 +75,7 @@ We used the European Soccer Database and filtered out the teams that did not bel
   <img width="460" height="300" src="images/SimpleGraph.png">
 </p>
 <p align="center">
-  <em>Figure 3. 2-Feature Loss Graph</em>
+  <em>Figure 3: 2-Feature Loss Graph</em>
 </p>
 one can see that validation loss is lower than training loss, which indicates that our model performs slighly better on data it has not seen before. The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
 <!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
@@ -83,7 +83,7 @@ one can see that validation loss is lower than training loss, which indicates th
   <img width="460" height="300" src="images/ComplexGraph.png">
 </p>
 <p align="center">
-  <em>Figure 4. 4-Feature Loss Graph</em>
+  <em>Figure 4: 4-Feature Loss Graph</em>
 </p>
 This time, our model worked better on data it has seen before.  We are intending on using a classification model architecture and building different combinations of features for further experiments. A function was also created that takes as input the ID number for two teams, and using the complex  model, predicts the winner. However the function always predicted the same accuracy even when the teams were switched. 
 
