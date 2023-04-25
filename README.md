@@ -24,7 +24,17 @@ In our results, we expect to see significant improvement in prediction accuracy 
 ## Methods
 We obtained the dataset from kaggle and need to make sure it looks clean and take care of some preprocessing logistics. Of the 25,000 data points collected from different leagues, we used matches from countries in the top 5 leagues: England, France, Germany, Italy, and Spain. 
 
-We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, total goals scored, home wins and away wins percentage, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple 1 which only contains the home and away teams ID numbers, and the amount of goals scored by each team. The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw.
+We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple model which only contains the home and away teams ID numbers, and the amount of goals scored by each team. 
+<!-- ![Figure 1: 2 Feature Model](images/2Feature.png) -->
+<p align="center">
+  <img width="460" height="300" src="images/2Feature.png">
+</p>
+
+The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw.
+<!-- ![Figure 1: 4 Feature Model](images/4Feature.png) -->
+<p align="center">
+  <img width="460" height="300" src="images/4Feature.png">
+</p>
 
 We are using pyTorch’s Neural Network [library](https://pytorch.org/docs/stable/nn.html), from which we will be using the feed forward architecture. We will be creating two different models and comparing the accuracy of using different features. The models we created are labeled 2-Feature and 4-Feature. The 2-Feature model is a feed forward model with 3 layers. The input layer has 2 input nodes and 16 nodes in the first hidden layer, 32 nodes in the 2nd hidden layer, and 1 output node.The 4-Feature model is also a feedvforward model with 3 layers. The layers are identical, except the input layer has 4 input nodes. 
 
