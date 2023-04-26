@@ -30,7 +30,7 @@ We also removed data that was formatted in XML and the predicted odds from vario
   <img width="460" height="300" src="images/2Feature.png">
 </p>
 <p align="center">
-  <em>Figure 1: Goals Scsored Model Table</em>
+  <em>Figure 1: Goals Scored Model Table</em>
 </p>
 
 The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw.
@@ -76,7 +76,7 @@ y = (matches["home_team_goal"] > matches["away_team_goal"]).values
 As mentioned previously, a 0 represents a home loss and a 1 represents a home win, and this line treats draws as a loss. However, ~30% of the matches in our data frame end a draw, which likely explains the low accuracy of our model. Compared to our related works our results were significantly worse. We yielded an accuracy of below 60% for our validation dataset while many optimized models in the field can consistently predict with above 70% accuracy. Looking at Fig. 1, 
 <!-- ![Figure 3. Simple Loss Graph](SimpleGraph.png) -->
 <p align="center">
-  <img width="460" height="300" src="images/SimpleGraph.png">
+  <img width="460" height="300" src="images/Goals Scored Loss.png">
 </p>
 <p align="center">
   <em>Figure 3: Goals Scored Loss Graph</em>
@@ -86,7 +86,7 @@ one can see that validation loss is lower than training loss, which looks like o
 The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
 <!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
 <p align="center">
-  <img width="460" height="300" src="images/ComplexGraph.png">
+  <img width="460" height="300" src="images/Head-To-Head Loss.png">
 </p>
 <p align="center">
   <em>Figure 4: Head-To-Head Loss Graph</em>
