@@ -83,13 +83,21 @@ As mentioned previously, a 0 represents a home loss and a 1 represents a home wi
 </p>
 one can see that validation loss is lower than training loss, which looks like our model performs slighly better on data it has not seen before. However, the y-axis scale is a bit misleading, and these two graphs are nearly on top of each other. Rerunning the model for 1000 epochs generates the following graph, 
 
+<!-- ![Figure 3. Simple Loss Graph](1000Epochs.png) -->
+<p align="center">
+  <img width="460" height="300" src="images/1000 epochs.png">
+</p>
+<p align="center">
+  <em>Figure 4: Goals Scored Loss Graph - 1000 Epochs</em>
+</p>
+one can see that the model is learning until around epoch 380 when the model starts overfitting. Initially, it looked like validation loss started to stabilize around epoch 200, but ultimately started overfitting. We predict early stopping may help remedy this problem.
 The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
 <!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
 <p align="center">
   <img width="460" height="300" src="images/Head-To-Head Loss.png">
 </p>
 <p align="center">
-  <em>Figure 4: Head-To-Head Loss Graph</em>
+  <em>Figure 5: Head-To-Head Loss Graph</em>
 </p>
 This time, our model worked better on data it has seen before.  We are intending on using a classification model architecture and building different combinations of features for further experiments. A function was also created that takes as input the ID number for two teams, and using the complex  model, predicts the winner. However the function always predicted the same accuracy even when the teams were switched. 
 
