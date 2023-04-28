@@ -83,7 +83,7 @@ As mentioned previously, a 0 represents a home loss and a 1 represents a home wi
 </p>
 one can see that validation loss is lower than training loss, which looks like our model performs slighly better on data it has not seen before. However, the y-axis scale is a bit misleading, and these two graphs are nearly on top of each other. Rerunning the model for 1000 epochs generates the following graph, 
 
-<!-- ![Figure 3. Simple Loss Graph](1000Epochs.png) -->
+<!-- ![Figure 4. Simple Loss Graph](1000Epochs.png) -->
 <p align="center">
   <img width="460" height="300" src="images/1000 epochs.png">
 </p>
@@ -91,6 +91,19 @@ one can see that validation loss is lower than training loss, which looks like o
   <em>Figure 4: Goals Scored Loss Graph - 1000 Epochs</em>
 </p>
 one can see that the model is learning until around epoch 380 when the model starts overfitting. Initially, it looked like validation loss started to stabilize around epoch 200, but ultimately started overfitting. We predict early stopping may help remedy this problem.
+
+Another step we tried to increase the accuracy was making the model wider and deeper. We first tried making the model deeper by adding an additional 2 layers, however the increase in accuracy was marginal. Then we tried making the model wider by doubling the number of nodes in each layer, however that also only marginally increased the accuracy. Next we tried making the model wider and deeper which increased our accuracy from 55% to 56%, the highest we've achieved so far. Running the model for 1000 epochs shows that the model beings to overfit around epoch 250, as shown in Fig. 5. Finally, the last remedy we tried was adding dropout layers. We added dropout layers with a probability of 0.2 to the first 2 layers, but our accuracy ended up decreasing slightly. The accuracy was still 55%, however all other remedies have managed to hover above 55.5%, but adding dropout layers decreased the accuracy to 55.1%.
+
+<!-- ![Figure 5. Simple Loss Graph](DeeperWider.png) -->
+<p align="center">
+  <img width="460" height="300" src="images/DeeperWider.png">
+</p>
+<p align="center">
+  <em>Figure 5: Goals Scored Loss Graph - More layers and Double the Number of Nodes</em>
+</p>
+
+As mentioned previously, our model treats a draw as a home loss. Having the model treat a draw as a home win instead significantly improves the accuracy. This time, we achieved an accuracy of 70%, which is inline with some of the models discussed earlier, however given that the model considers goals scorred, it is still below what we hoped for. 
+
 The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
 <!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
 <p align="center">
