@@ -102,7 +102,16 @@ Another step we tried to increase the accuracy was making the model wider and de
   <em>Figure 5: Goals Scored Loss Graph - More layers and Double the Number of Nodes</em>
 </p>
 
-As mentioned previously, our model treats a draw as a home loss. Having the model treat a draw as a home win instead significantly improves the accuracy. This time, we achieved an accuracy of 70%, which is inline with some of the models discussed earlier, however given that the model considers goals scorred, it is still below what we hoped for. 
+As mentioned previously, our model treats a draw as a home loss. Having the model treat a draw as a home win instead significantly improves the accuracy. This time, we achieved an accuracy of 71.13%, which is on par with some of the models discussed earlier, however given that the model takes in goals scorred, it is still below what we hoped for. The change in accuracy is most likely due to class imbalance. By treating draws as a home win, we are increasing the number of positive class examples, which allows the model to learn more patterns when a match ends in a draw. Compared to figure 3, the loss graph with this condition is much more stable when run with a larger amount of epochs. The same hyperparameters were changed as in the first scenario, however none of the changes increased accuracy beyond 71%.
+
+<!-- ![Figure 2. Complex Loss Graph](Stable.png) -->
+<p align="center">
+  <img width="460" height="300" src="images/Stable.png">
+</p>
+<p align="center">
+  <em>Figure 6: Goals Scored Loss Graph - Treat Draws as Home Win</em>
+</p>
+
 
 The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
 <!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
@@ -110,7 +119,7 @@ The complex model yielded slightly better results, with an accuracy of 59%. Fig.
   <img width="460" height="300" src="images/Head-To-Head Loss.png">
 </p>
 <p align="center">
-  <em>Figure 5: Head-To-Head Loss Graph</em>
+  <em>Figure 7: Head-To-Head Loss Graph</em>
 </p>
 This time, our model worked better on data it has seen before.  We are intending on using a classification model architecture and building different combinations of features for further experiments. A function was also created that takes as input the ID number for two teams, and using the complex  model, predicts the winner. However the function always predicted the same accuracy even when the teams were switched. 
 
