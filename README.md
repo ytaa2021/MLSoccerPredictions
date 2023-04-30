@@ -113,18 +113,20 @@ As mentioned previously, our model treats a draw as a home loss. Having the mode
 </p>
 
 
-The complex model yielded slightly better results, with an accuracy of 59%. Fig. 2 shows the loss over epoch graph. 
-<!-- ![Figure 2. Complex Loss Graph](ComplexGraph.png) -->
+The 4-Feature model yielded slightly better results than the 2-Feature model, with an accuracy of 59%. Fig. 7 shows the loss over epoch graph. 
+<!-- ![Figure 7. Complex Loss Graph](ComplexGraph.png) -->
 <p align="center">
   <img width="460" height="300" src="images/Head-To-Head Loss.png">
 </p>
 <p align="center">
   <em>Figure 7: Head-To-Head Loss Graph</em>
 </p>
-This time, our model worked better on data it has seen before.  We are intending on using a classification model architecture and building different combinations of features for further experiments. A function was also created that takes as input the ID number for two teams, and using the complex  model, predicts the winner. However the function always predicted the same accuracy even when the teams were switched. 
+This time, our model worked better on data it has seen before. The graph shows that the model is still learning so we ran it for 1000 epochs instead of 100. The model accuracy increased by 2% and the loss graph also slightly improved. However, at around epoch 300, the validation loss curve begins to overfit. We ran a similar test to the 2-Feature model where we treat draws in head-to-head scores as a home win. The model accuracy increased to 68%, and we suspect the reasoning for the increase is the same as the 2-Feature model, i.e increasing the representation of the positive class. We are intending on using a multi-classification model architecture and building different combinations of features for further experiments. A function was also created that takes as input the ID number for two teams, and using the 4-Feature model, predicts the winner.
 
 ## Ethics
-Predicting sporting outcomes does not cause any harm. However, harm may occur when individuals use this model to gamble on sports betting websites. The European Soccer Database contains columns that list the betting odds  from a variety of sports betting websites. While listing the betting odds may be useful to gain insight on the prediction made by the company, we want to avoid incentivizing the urge to gamble.The one thing we want to avoid is a user using our model to gamble on soccer matches, and potentially losing money. Cumpulsive Gambling is a serious problem that has real word affects on an individual and their family. 
+Predicting sporting outcomes does not cause any harm. People attempt to predict the outcome of sports matches all the time. Predicting the outcome of a match 
+
+However, harm may occur when individuals use this model to gamble on sports betting websites. The European Soccer Database contains columns that list the betting odds  from a variety of sports betting websites. While listing the betting odds may be useful to gain insight on the prediction made by the company, we want to avoid incentivizing the urge to gamble.The one thing we want to avoid is a user using our model to gamble on soccer matches, and potentially losing money. Cumpulsive Gambling is a serious problem that has real word affects on an individual and their family. 
 
 ## Reflection
 We would’ve liked to use a dataset that is more recent than what we used as our dataset only spans 2008 to 2016. Soccer teams can significantly evolve year-to-year, so our model likely wouldn’t be very useful for predicting current or future matches. We also would have used a dataset with more information – perhaps one that also contains individual player information. Using this, we could track which teams players are on and use their information to help predict how good a team might be. 
