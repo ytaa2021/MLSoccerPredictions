@@ -24,7 +24,7 @@ In our results, we expect to see significant improvement in prediction accuracy 
 ## Methods
 We obtained the dataset from kaggle and need to make sure it looks clean and take care of some preprocessing logistics. Of the 25,000 data points collected from different leagues, we used matches from countries in the top 5 leagues: England, France, Germany, Italy, and Spain. 
 
-We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple model which only contains the home and away teams ID numbers, and the amount of goals scored by each team. 
+We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple model which only contains the home and away teams ID numbers, and learns against the result of whether the home team wins based on the amount of goals scored by each team. 
 <!-- ![Figure 1: 2 Feature Model](images/2Feature.png) -->
 <p align="center">
   <img width="460" height="300" src="images/2Feature.png">
@@ -69,11 +69,9 @@ Possible pitfalls we see in our model is low or inaccurate classification. In ou
 
 
 ## Discussion
-We used the European Soccer Database and filtered out the teams that did not belong to England, France, Italy, Spain, or Germany. We created 2 models, a NN that only considers the goals scored by both teams and another model that considers a team's head-to-head history. It should be noted that there are stats that cannot be measured, such as player morale, that plays a large role in determining how a player does in a given match (Shum 2020). Our comparison will focus on the accuracy of the two models we created, as well as models featured in the Introduction. Running the simple model produces an accuracy of ~55%. This is not the result we expected as if you tell a person the goals scored by each team in a match, they can tell you who won with 100% accuracy. We believe this is a result of the following line:
-```
-y = (matches["home_team_goal"] > matches["away_team_goal"]).values
-```
-As mentioned previously, a 0 represents a home loss and a 1 represents a home win, and this line treats draws as a loss. However, ~30% of the matches in our data frame end a draw, which likely explains the low accuracy of our model. Compared to our related works our results were significantly worse. We yielded an accuracy of below 60% for our validation dataset while many optimized models in the field can consistently predict with above 70% accuracy. Looking at Fig. 1, 
+We used the European Soccer Database and filtered out the teams that did not belong to England, France, Italy, Spain, or Germany. We created 2 models, a NN that only considers the ID numbers of both teams and another model that considers a team's head-to-head history. It should be noted that there are stats that cannot be measured, such as player morale, that plays a large role in determining how a player does in a given match (Shum 2020). Our comparison will focus on the accuracy of the two models we created, as well as models featured in the Introduction. Running the simple model produces an accuracy of ~55%. This is simply due to the fact that all the network has to refer to the underlying understanding it comes to of how good a team is based purely on the matches it is trained on. Because it has no other data to refer to, these predictions understand each team to be a fixed non-varying entity over time.
+
+Looking at Fig. 1, 
 <!-- ![Figure 3. Simple Loss Graph](SimpleGraph.png) -->
 <p align="center">
   <img width="460" height="300" src="images/Goals Scored Loss.png">
