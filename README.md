@@ -24,7 +24,7 @@ In our results, we expect to see significant improvement in prediction accuracy 
 ## Methods
 We obtained the dataset from kaggle and need to make sure it looks clean and take care of some preprocessing logistics. Of the 25,000 data points collected from different leagues, we used matches from countries in the top 5 leagues: England, France, Germany, Italy, and Spain. 
 
-We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple model which only contains the home and away teams ID numbers, and learns against the result of whether the home team wins based on the amount of goals scored by each team. 
+We also removed data that was formatted in XML and the predicted odds from various betting companies. Our dataset then contains the ids for the country, home and away team, and a column of 0s and 1s where 1s represent a home team win. We created 2 different dataframes, a simple model which only contains the home and away teams ID numbers, and learns against the result of whether the home team wins which is calculated with the amount of goals scored by each team. 
 <!-- ![Figure 1: 2 Feature Model](images/2Feature.png) -->
 <p align="center">
   <img width="460" height="300" src="images/2Feature.png">
