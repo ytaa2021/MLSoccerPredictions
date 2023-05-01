@@ -33,18 +33,18 @@ We also removed data that was formatted in XML and the predicted odds from vario
   <em>Figure 1: Goals Scored Model Table</em>
 </p>
 
-The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw.
+The complex dataframe also contains the ID numbers, with the addion of each team's head-to-head history. The head-to-head history contains the total amount of times each team has played eachother, as well as the number of times the home and away team has won. Also included is the number of times the match has ended in a draw. Below you can see the match history table.
 <!-- ![Figure 1: 4 Feature Model](images/4Feature.png) -->
 <p align="center">
   <img width="460" height="300" src="images/4Feature.png">
 </p>
 <p align="center">
-  <em>Figure 2: Goals Scored Model Table</em>
+  <em>Figure 2: Match History Model Table</em>
 </p>
 
 We are using pyTorch’s Neural Network [library](https://pytorch.org/docs/stable/nn.html), from which we will be using the feed forward architecture. We will be creating two different models and comparing the accuracy of using different features. The models we created are labeled Goals Scored and Head-To-Head. The Goals Scored model is a feed forward model with 3 layers. The input layer has 2 input nodes and 16 nodes in the first hidden layer, 32 nodes in the 2nd hidden layer, and 1 output node.The Head-To-Head model is also a feedvforward model with 3 layers. The layers are identical, except the input layer has 4 input nodes. 
 
-After the dataframes were completed, we normalized the data using a label encoder, and then split the data into a training and test set. Both of the sets are of size 14585 elements 
+After the dataframes were completed, we normalized the data using a label encoder, and then split the data into a training and test set. Our matches dataset consists 14585 elements split into an 80-20 train-test split. Our history
 ```
 label = LabelEncoder()
 #Fit label and return encoded labels for training data
@@ -79,7 +79,7 @@ Looking at Fig. 1,
 <p align="center">
   <em>Figure 3: Goals Scored Loss Graph</em>
 </p>
-one can see that validation loss is lower than training loss, which looks like our model performs slighly better on data it has not seen before. However, the y-axis scale is a bit misleading, and these two graphs are nearly on top of each other. Rerunning the model for 1000 epochs generates the following graph, 
+one can see that validation loss is lower than training loss. However, the y-axis scale is a bit misleading, and these two graphs are nearly on top of each other. Rerunning the model for 1000 epochs generates the following graph, 
 
 <!-- ![Figure 4. Simple Loss Graph](1000Epochs.png) -->
 <p align="center">
