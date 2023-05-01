@@ -143,14 +143,14 @@ Our data focused more so on league games, which are a bit more predictable due t
 
 
 ## Works Cited
-[^1]: B. G. Aslan and M. M. Inceoglu, "A Comparative Study on Neural Network Based Soccer Result Prediction," Seventh International Conference on Intelligent Systems Design and Applications (ISDA 2007), Rio de Janeiro, Brazil, 2007.
+[^1]: [B. G. Aslan and M. M. Inceoglu, "A Comparative Study on Neural Network Based Soccer Result Prediction," Seventh International Conference on Intelligent Systems Design and Applications (ISDA 2007), Rio de Janeiro, Brazil, 2007.](https://core.ac.uk/download/pdf/324142117.pdf)
 
-[^2]: E. Tiwari, P. Sardar and S. Jain, "Football Match Result Prediction Using Neural Networks and Deep Learning," 2020 8th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions) (ICRITO). 2020.
+[^2]: [E. Tiwari, P. Sardar and S. Jain, "Football Match Result Prediction Using Neural Networks and Deep Learning," 2020 8th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions) (ICRITO). 2020.](https://ieeexplore.ieee.org/document/9197811)
 
-[^3]: Hassan A, Akl A-R, Hassan I, Sunderland C. Predicting Wins, Losses and Attributes’ Sensitivities in the Soccer World Cup 2018 Using Neural Network Analysis. Sensors. 2020.
+[^3]: [Hassan A, Akl A-R, Hassan I, Sunderland C. "Predicting Wins, Losses and Attributes’ Sensitivities in the Soccer World Cup 2018 Using Neural Network Analysis". Sensors. 2020.](https://www.mdpi.com/1424-8220/20/11/3213)
 
-[^4]: Rahman, M.A. A deep learning framework for football match prediction. (2020)
+[^4]: [Rahman, M.A. "A Deep Learning Framework for Football Match Prediction". 2020](https://link.springer.com/article/10.1007/s42452-019-1821-5)
 
-[^5]: Shum, Roland et al. "Neural Networks Football Result Prediction" 2020.
+[^5]: [Shum, Roland et al. "Neural Networks Football Result Prediction" 2020.](https://medium.com/@rolandshum.shc/neural-networks-football-result-prediction-d8b0f933118b)
 
-[^6]: Ulmer, Benjamin and M. Pasadas Fernández. “Predicting Soccer Match Results in the English Premier League.” 2014.
+[^6]: [Ulmer, Benjamin and M. Pasadas Fernández. “Predicting Soccer Match Results in the English Premier League.” 2014.](https://cs229.stanford.edu/proj2014/Ben%20Ulmer,%20Matt%20Fernandez,%20Predicting%20Soccer%20Results%20in%20the%20English%20Premier%20League.pdf)
