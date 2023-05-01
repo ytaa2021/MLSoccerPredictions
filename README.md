@@ -116,7 +116,7 @@ As mentioned previously, our model treats a draw as a home loss. Having the mode
 The 4-Feature model yielded slightly better results than the 2-Feature model, with an accuracy of 59%. Fig. 7 shows the loss over epoch graph. 
 <!-- ![Figure 7. Complex Loss Graph](ComplexGraph.png) -->
 <p align="center">
-  <img width="460" height="300" src="images/Head-To-Head Loss.png">
+  <img width="460" height="300" src="images/Screen Shot 2023-04-30 at 8.26.12 PM.png">
 </p>
 <p align="center">
   <em>Figure 7: Head-To-Head Loss Graph</em>
