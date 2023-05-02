@@ -7,7 +7,9 @@
 
 ### Team members: Anna, Elshiekh, Alan, Yotam
 
-abstract: "This is my abstract."
+## Abstract
+
+The use of NN to predict soccer matches have yielded great results, and succeed where traditional statistical models fail. The use of diverse data and advanced machine learning algorithms can predict the results of match with 80% accuracy. In this project, two different models were created using the European Soccer database. The model was able to achieve ~70% accuracy and the 2nd model reached ~68%. Both of these models take in different soccer stats. It is important that this model, or any model that attempts to predict the outcome of a match, should be used responsibily. An individual may believe that this model will help them make a more informed decision when gambling, but it should be noted that the prediction is not guarenteed. We can limit the risks of this tool by placing a disclaimer to potential users, informing them not to use this tool for the purposes of gambling.
 
 ## Introduction
 
@@ -77,7 +79,7 @@ Possible pitfalls we see in our model are low or inaccurate classification. In o
 
 ## Discussion
 
-We used the European Soccer Database and filtered out the teams that did not belong to England, France, Italy, Spain, or Germany. We created 2 models, a NN that only considers the ID numbers of both teams and another model that considers a team's head-to-head history. It should be noted that there are stats that cannot be measured, such as player morale, which plays a large role in determining how a player does in a given match (Shum 2020)[^5]. Our comparison will focus on the accuracy of the two models we created, as well as the models featured in the Introduction. Running the simple model produces an accuracy of ~55%. This is simply due to the fact that all the network has to refer to the underlying understanding it comes to of how good a team is based purely on the matches on which it is trained. Because it has no other data to refer to, these predictions understand each team to be a fixed non-varying entity over time.
+We used the European Soccer Database and filtered out the teams that did not belong to England, France, Italy, Spain, or Germany. We created 2 models, a NN that only considers the ID numbers of both teams and another model that considers a team's head-to-head history. It should be noted that there are stats that cannot be measured, such as player morale, which plays a large role in determining how a player does in a given match (Shum 2020)[^5]. Our comparison will focus on the accuracy of the two models we created, as well as the models featured in the Introduction. Running the simple model produces an accuracy of ~55%. This is simply due to the fact that all the network has to refer to the underlying understanding it comes to of how good a team is based purely on the matches on which it is trained. Because it has no other data to refer to, these predictions understand each team to be a fixed non-varying entity over time. It is also possible that the model is trying to find a non-existant pattern in the team's ID numbers.
 
 Looking at Fig. 3, 
 
