@@ -7,6 +7,8 @@
 
 ### Team members: Anna, Elshiekh, Alan, Yotam
 
+abstract: "This is my abstract."
+
 ## Introduction
 
 If you follow soccer or any sport for that matter, religiously, you will quickly realize that the outcomes are usually unpredictable. Furthermore, accurately predicting the outcome of soccer matches is difficult. Last year, 1.5 billion people watched the world cup, making soccer the most popular sport in the world. Fans around the world try to predict the outcome of soccer matches for fun or even to make money through sports betting. The unpredictability of soccer matches presents a fun opportunity to use machine learning to create a model that can accurately predict that outcome of soccer matches. Using the model can also lead to sports betters making more informed decisions (Shum et al. 2020).[^5]
